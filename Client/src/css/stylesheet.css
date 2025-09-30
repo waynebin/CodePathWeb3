@@ -1,0 +1,126 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 100px;
+   
+}
+.card {
+    width: 300px;
+    background: #f0f0f0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    width: 300px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-10px);
+}   
+.card img {
+    width: 100%;
+    height: auto;
+}
+.card-content {
+    padding: 15px;
+}
+.card h2 {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 1.5em;
+}
+.card p {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.3em;
+    
+    text-align: justify;
+}
+.read-more {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+.read-more:hover {
+    background: #555;
+}
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+.navbar ul li {
+    margin: 0 15px;
+}
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: block;
+}
+.navbar ul li a:hover {
+    background-color: #575757;
+}
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media (max-width: 480px) {
+    .card {
+        width: 90%;
+    }
+}
+.header {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.header .logo img {
+    height: 50px;
+    width: auto;
+    vertical-align: middle;
+    margin-right: 10px;
+
+}   
+.header h1 {
+    display: inline;
+    font-size: 24px;
+    vertical-align: middle;
+}
+.header p {
+    font-size: 16px;
+    margin-top: 5px;
+}
