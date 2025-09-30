@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "the-one-man-show",
+    "title": "The One Man Show",
+    "image": "/src/images/20250928_2326_Entrepreneurial Visions_simple_compose_01k69r1c8we5ev1j9ypgvqdy27.png",
+    "summary": "Discover trends in business management and strategy…",
+    "body": "Full article text… (include everything you consider a ‘database field’)",
+    "author": "Business Guide Weekly",
+    "published": "2025-09-28",
+    "category": "Entrepreneurship",
+    "tags": ["solo founder","strategy","mindset"],
+    "readingTime": 6
+  },
+  {
+    "slug": "bootstrap-your-business",
+    "title": "Bootstrap Your Business",
+    "image": "/src/images/20250928_2329_Entrepreneurial Teamwork_simple_compose_01k69r74j1e6ytpmk98b31d8nd.png",
+    "summary": "Expert tips to launch with limited capital…",
+    "body": "Full article text…",
+    "author": "Business Guide Weekly",
+    "published": "2025-09-28",
+    "category": "Finance",
+    "tags": ["bootstrapping","cashflow","growth"],
+    "readingTime": 7
+  },
+  {
+    "slug": "lets-market-your-business",
+    "title": "Let's Market Your Business",
+    "image": "/src/images/20250928_2332_Marketing Team Effort_simple_compose_01k69rbq25e0x9999av093y2m9.png",
+    "summary": "From social to SEO—reach and convert…",
+    "body": "Full article text…",
+    "author": "Business Guide Weekly",
+    "published": "2025-09-28",
+    "category": "Marketing",
+    "tags": ["seo","social","funnels"],
+    "readingTime": 5
+  },
+  {
+    "slug": "business-data-insights",
+    "title": "Business Data Insights",
+    "image": "/src/images/20250928_2326_Entrepreneurial Visions_simple_compose_01k69r1c8xep0bcph4vyve0cha.png",
+    "summary": "Collect, analyze, and visualize data for decisions…",
+    "body": "Full article text…",
+    "author": "Business Guide Weekly",
+    "published": "2025-09-28",
+    "category": "Data",
+    "tags": ["analytics","dashboards","bi"],
+    "readingTime": 8
+  },
+  {
+    "slug": "business-growth",
+    "title": "Business Growth",
+    "image": "/src/images/20250928_2336_Business Growth Stages_simple_compose_01k69rm1zse6na3n3dp53tdsqz.png",
+    "summary": "How the largest firms scale and endure…",
+    "body": "Full article text…",
+    "author": "Business Guide Weekly",
+    "published": "2025-09-28",
+    "category": "Strategy",
+    "tags": ["scaling","ops","case studies"],
+    "readingTime": 9
+  }
+]

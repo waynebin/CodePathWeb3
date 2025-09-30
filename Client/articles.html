@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Articles • Business Guide Weekly</title>
+  <link rel="stylesheet" href="/src/css/stylesheet.css"/>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <a href="/"><img src="/src/images/20250929_0020_Simplified Business Design_simple_compose_01k69v53sne6htemxwawtjsw9s.png" alt="Business Guide Weekly Logo"/></a>
+    </div>
+    <h1 id="page-title">Articles</h1>
+    <nav class="navbar">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about.html">About Us</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Listing -->
+  <main id="list" class="card-container" hidden></main>
+
+  <!-- Detail -->
+  <main id="detail" class="article-detail" hidden>
+    <img id="hero" class="hero" alt="">
+    <article>
+      <h2 id="title"></h2>
+      <p id="meta"></p>
+      <p id="body"></p>
+      <p id="tags"></p>
+    </article>
+    <p><a href="/articles">← Back to Articles</a></p>
+  </main>
+
+  <script>
+    (async function () {
+      const path = location.pathname;
+      const isDetail = path.startsWith('/articles/') && path.split('/').filter(Boolean).length === 2;
+      const listEl = document.getElementById('list');
+      const detailEl = document.getElementById('detail');
+
+      if (isDetail) {
+        const slug = path.split('/').pop();
+        const res = await fetch(`/api/articles/${slug}`);
+        if (!res.ok) {
+          document.body.innerHTML = '<h1>404</h1><p>Article not found.</p>';
+          return;
+        }
+        const a = await res.json();
+
+        document.title = `${a.title} • Business Guide Weekly`;
+        document.getElementById('page-title').textContent = a.title;
+        document.getElementById('hero').src = a.image;
+        document.getElementById('hero').alt = a.title;
+        document.getElementById('title').textContent = a.title;
+        document.getElementById('meta').textContent =
+          `${a.category} • ${a.author} • ${a.published} • ~${a.readingTime} min read`;
+        document.getElementById('body').textContent = a.body;
+        document.getElementById('tags').innerHTML =
+          `<strong>Tags:</strong> ${(a.tags||[]).map(t=>`#${t}`).join(' ')}`;
+
+        detailEl.hidden = false;
+        return;
+      }
+
+      // Listing page
+      const res = await fetch('/api/articles');
+      const items = await res.json();
+      document.getElementById('page-title').textContent = 'Articles';
+      listEl.innerHTML = items.map(it => `
+        <div class="card">
+          <h2>${it.title}</h2>
+          <img src="${it.image}" alt="${it.title}">
+          <div class="card-content">
+            <p>${it.summary}</p>
+            <a class="read-more" href="/articles/${it.slug}">Read More</a>
+          </div>
+        </div>
+      `).join('');
+      listEl.hidden = false;
+    })();
+  </script>
+</body>
+</html>
