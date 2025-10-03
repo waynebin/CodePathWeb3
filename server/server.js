@@ -1,4 +1,5 @@
 import express from 'express';
+import './config/dotenv.js'; // Load environment variables
 import path from 'path';
 import { fileURLToPath } from 'url';
 import articlesRouter from './routes/articles.js';
