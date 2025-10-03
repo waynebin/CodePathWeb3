@@ -29,7 +29,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-<img src='src/project_2_web3_WalkThrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='Client/src/project_2_web3_WalkThrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with lapcap
